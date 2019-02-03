@@ -1,7 +1,3 @@
-%This part is used to let images sort by natural-order, and is taken from
-%http://cn.mathworks.com/matlabcentral/fileexchange/34464-customizable-natural-order-sort
-%by Stephen Cobeldick
-
 function [X,ndx,dbg] = natsort(X,xpr,varargin) %#ok<*SPERR>
 % Alphanumeric / Natural-Order sort the strings in a cell array of strings (1xN char).
 %
@@ -331,5 +327,3 @@ X = X(ndx);
 %
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%natsort
-
-
