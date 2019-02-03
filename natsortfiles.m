@@ -7,7 +7,7 @@ function [X,ndx,dbg] = natsortfiles(X,varargin)
 % character order and also by the values of any numbers that are within
 % the names. Filenames, file-extensions, and directories (if supplied)
 % are split apart and are sorted separately: this ensures that shorter
-% filenames sort before longer ones (i.e. thus giving a dic,jhjktionary sort).
+% filenames sort before longer ones (i.e. thus giving a dictionary sort).
 %
 %%% Example:
 % D = 'C:\Test';
@@ -144,7 +144,10 @@ else % for debugging:
 	dbg{num+1} = tmp(idd,:);
 end
 ndx = ndx(ids);
-%
+%%This part is used to let images sort by natural-order, and is taken from
+%http://cn.mathworks.com/matlabcentral/fileexchange/34464-customizable-natural-order-sort
+%by Stephen Cobeldick
+
 % Natural-order sort of the directory names:
 for k = num:-1:1
 	idx = len>=k;
